@@ -1,0 +1,16 @@
+{% block content %}      
+
+{% load crispy_forms_tags %}
+
+<!--Login--> 
+<div class="container py-5">
+  <h1>Login</h1>
+  <form method="POST">
+    {% csrf_token %}
+    {{ login_form|crispy }}
+    <button type="submit" style="background: linear-gradient(#e66465, #9198e5); height:35px; border-radius: 16px; border: none;">Login</button>
+  </form>
+  <p class="text-center">Don't have an account? <a href="/registration" style="color:black;">Create an account</a>.</p>
+</div>
+
+{% endblock %}

@@ -1,0 +1,15 @@
+{% block content %}      
+
+{% load crispy_forms_tags %}
+
+
+<div class="container py-5">
+  <h1>Azuriraj</h1>
+  <form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ profile_form|crispy }}
+    <button type="submit" style="background: linear-gradient(#e66465, #9198e5); height:35px; border-radius: 16px; border: none;">Update</button>
+  </form>
+</div>
+
+{% endblock %}
